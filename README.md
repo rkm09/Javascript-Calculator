@@ -2,7 +2,7 @@
 
 ### [FCC Advanced Project - 1/4 : Javascript-Calculator](https://www.freecodecamp.org/challenges/build-a-javascript-calculator)
 
-**Description**: Javascript-Calculator is a simple calculator built using javascript, it does the basic operations along with some other useful operations.
+**Description**: Javascript-Calculator is a simple calculator built using javascript, it does the basic operations along with some other useful operations like modulo, inverse, log, square root etc.
 
 **User Story**:
 * I can add, subtract, multiply and divide two numbers.
