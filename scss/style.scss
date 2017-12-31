@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Milonga');
+@import url('https://fonts.googleapis.com/css?family=Michroma');
+@import url('https://fonts.googleapis.com/css?family=Revalia');
+$hd:#374049;
+$gen:#000;
+$dig:dimgray;
+$ops:dimgray;
+$digits:#006633;
+$lt-ops:tomato;
+$lt-digits:#00e673;
+$lt-eq:skyblue;
+$lt-pop:crimson;
+$lt-bg:#999999;
+$scdigits:antiquewhite;
+$pop:maroon;
+$sc:#0d0d0d;
+$eq:#008080;
+$bg:gray;
+$font-hd:'Revalia',helvetica;
+$font-gen:'Michroma',helvetica;
+//$font-foo:'Orbitron',helvetica,Revalia;
+//Orbitron
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+html,body{height:100%;}
+body{
+  background: radial-gradient(circle,gray,#21262c,black);
+  color:$gen;
+  font-size:1.1rem;
+  font-family:$font-gen;
+  font-weight:bold;
+}
+.wrapper{
+  width:30rem;
+  height:33rem;
+  background-color:$bg;
+  display:grid;
+  grid-template-rows: repeat(9,1fr);
+  grid-template-columns: repeat(5,1fr);
+  grid-gap:.9rem;
+  border-radius:1rem;
+  border:.15rem solid #404040;
+  border-top: -.45rem solid #404040 ;
+  //border-bottom:.4rem solid #595959;
+  @include box-shadow(0 0 4rem #000, 0 0 2rem #000 inset);
+  padding:1rem;
+  grid-template-areas:
+    "hd hd hd hd hd"
+    "sc sc sc sc sc"
+    "sc sc sc sc sc"
+    "ac ce an pm md"
+    "rt sq iv dv dv "
+    "sv et ni ml ml"
+    "fo fi sx sb sb"
+    "vn to re pl pl"
+    "lg ro dt eq eq"
+}
+.center{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#hd{
+  grid-area:hd;
+  font-family:$font-hd;
+  color:$hd;
+  word-spacing:1rem;
+  letter-spacing:.1rem;
+  font-size:1.5rem;
+  //text-shadow:  0rem 0.10rem .2rem #ebc7eb ;
+  //text-shadow:  0.2rem 0.10rem .1rem #000 ;
+}
+#sc{
+  grid-area:sc;
+  font-family:$font-gen;
+  background-color:$sc;
+  color:$scdigits;
+  border-radius:1rem;
+  border:.05rem solid $hd;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  flex-direction:column;
+  padding:1rem;
+  overflow:auto;
+  text-overflow: ellipsis; 
+  @include box-shadow(0 0 1rem .01rem plum , 0 0 .1rem .1rem $hd inset );
+  #sc1{
+   font-size:1.5rem;
+  }
+  #sc2{
+    font-size:.8rem;
+    opacity:0.9;
+    color:pink;
+  }
+}
+  #of{grid-area:of;}
+  #ac{grid-area:ac;}
+  #ce{grid-area:ce;}
+  #bk{grid-area:bk;}
+  #ng{grid-area:ng;}
+
+  #rt{grid-area:rt;}
+  #sq{grid-area:sq;}
+  #iv{grid-area:iv;}
+  #dv{grid-area:dv;}
+
+  #sv{grid-area:sv;}
+  #et{grid-area:et;}
+  #ni{grid-area:ni;}
+  #ml{grid-area:ml;}
+
+
+  #fo{grid-area:fo;}
+  #fi{grid-area:fi;}
+  #sx{grid-area:sx;}
+  #sb{grid-area:sb;}
+
+
+  #vn{grid-area:vn;}
+  #to{grid-area:to;}
+  #re{grid-area:re;}
+  #pl{grid-area:pl;}
+
+  #ro{grid-area:ro;}
+  #lg{grid-area:lg;}
+  #dt{grid-area:dt;}
+  #eq{
+    grid-area:eq;
+    background-color:$eq;
+    @include box-shadow(0 -.2rem .5rem .01rem #000);
+    border-bottom:.3rem solid $lt-eq;
+    transition : .1s all linear;
+    &:active{
+    border-bottom:none;
+    transform: translate(0,.3rem);
+    color: $lt-eq;
+    box-shadow:none;
+  }
+    &:hover{
+    color: $lt-eq;
+  }
+}
+.dg{
+  background-color:$digits !important;
+  border-bottom:.3rem solid $lt-digits;
+  @include box-shadow(0 -.2rem .5rem .01rem #000);
+  transition : .1s all linear;
+  &:active{
+    border-bottom:none;
+    transform: translate(0,.3rem);
+     color: $lt-digits;
+    box-shadow:none;
+  }
+  &:hover{
+   color: $lt-digits;
+  }
+}
+.op{
+  background-color:$ops !important;
+  border-bottom:.3rem solid $lt-ops;
+ @include box-shadow(0 -0.2rem .5rem .01rem #000);
+  transition : .1s all linear;
+   &:active{
+    border-bottom:none;
+    transform: translate(0,.3rem);
+     color: $lt-ops;
+     box-shadow:none;
+  }
+  &:hover{
+    color: $lt-ops;
+  }
+}
+.three{
+  background-color:$pop;
+  border-radius:1rem;
+  @include box-shadow(0 -0.2rem .5rem .01rem #000);
+  cursor:pointer;
+  border-bottom:.3rem solid $lt-pop;
+  transition : .1s all linear;
+   &:active{
+    border-bottom:none;
+    transform: translate(0,.3rem);
+     color: $lt-pop;
+     box-shadow:none;
+  }
+  &:hover{
+   color: $lt-pop;
+  }
+}
+.four{
+  border-radius:1rem;
+  cursor:pointer;
+}
+.five{
+  border-radius:1rem;
+  cursor:pointer;
+}
+.six{
+  border-radius:1rem;
+  cursor:pointer;
+}
+.seven{
+  border-radius:1rem;
+  cursor:pointer;
+}
+.eight{
+  border-radius:1rem;
+  cursor:pointer;
+}
