@@ -1,6 +1,6 @@
 # [Javascript-Calculator](https://rkm09.github.io/Javascript-Calculator)
 
-### [FCC Advanced Project - 1/4 : Javascript-Calculator](https://www.freecodecamp.org/challenges/build-a-javascript-calculator)
+### [FCC FrontEnd Advanced Projects - 1/4 : Javascript-Calculator](https://www.freecodecamp.org/challenges/build-a-javascript-calculator)
 
 **Description**: Javascript-Calculator is a simple calculator built using javascript, it does the basic operations along with some other useful operations like modulo, inverse, log, square root etc.
 
